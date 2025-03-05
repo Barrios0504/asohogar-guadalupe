@@ -1,0 +1,93 @@
+/* Estilos responsive */
+
+/* Tablets y dispositivos medianos */
+@media screen and (max-width: 768px) {
+    .nav-main {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Dispositivos móviles */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header {
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Para pantallas grandes */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Para impresión */
+@media print {
+    .nav-main,
+    .footer {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .hero {
+        height: auto;
+    }
+} 
