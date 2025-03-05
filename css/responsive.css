@@ -4,16 +4,17 @@
 @media screen and (max-width: 768px) {
     .nav-main {
         flex-direction: column;
-        padding: 1rem;
-        align-items: center;
+        padding: 0.5rem;
     }
 
     .logo-container {
-        margin-bottom: 1rem;
+        margin-bottom: 0.3rem;
+        width: 50px;
+        height: 50px;
     }
 
     .logo-container img {
-        max-width: 200px;
+        max-width: 100%;
         height: auto;
     }
 
@@ -21,27 +22,38 @@
         flex-direction: column;
         width: 100%;
         text-align: center;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
     }
 
     .nav-links li {
-        margin: 0.5rem 0;
+        margin: 0.3rem 0;
     }
 
     .nav-links a {
         display: block;
-        padding: 0.8rem;
-        background-color: #f8f9fa;
+        padding: 0.5rem;
+        background-color: var(--light-blue);
         border-radius: 5px;
-        transition: background-color 0.3s;
-    }
-
-    .nav-links a:hover {
-        background-color: #e9ecef;
+        font-size: 0.9rem;
     }
 
     .hero {
-        height: 50vh;
+        margin-top: 110px;
+    }
+
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 350px;
+    }
+
+    .slider img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     section {
@@ -53,12 +65,19 @@
         gap: 1.5rem;
     }
 
-    .service-card {
-        padding: 1.5rem;
+    /* Ajustes para páginas internas */
+    .about-content,
+    .services-content {
+        margin-top: 180px;
+        padding: 2rem 1rem;
+        background-color: var(--white);
     }
 
-    .footer-content {
-        padding: 2rem 1rem;
+    .about-content h1,
+    .services-content h1 {
+        margin-top: 0;
+        text-align: center;
+        color: var(--dark-blue);
     }
 }
 
@@ -69,88 +88,138 @@
     }
 
     .header {
-        padding: 0.5rem;
+        padding: 0.2rem 0;
+    }
+
+    .nav-main {
+        padding: 0.2rem;
+    }
+
+    .logo-container {
+        width: 35px;
+        height: 35px;
+        margin: 0;
     }
 
     .logo-container img {
-        max-width: 150px;
+        max-width: 100%;
     }
 
-    h1 {
-        font-size: 1.8em;
-        text-align: center;
-        margin-bottom: 1.5rem;
+    .nav-links {
+        padding: 0.2rem 0;
     }
 
-    h2 {
-        font-size: 1.5em;
-        text-align: center;
-        margin-bottom: 1rem;
+    .nav-links li {
+        margin: 0.15rem 0;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+        padding: 0.3rem;
     }
 
     .hero {
-        height: 40vh;
+        margin-top: 85px;
+        height: auto;
+    }
+
+    .slider {
+        height: 400px;
+        margin-bottom: 1rem;
+    }
+
+    .slider img {
+        position: relative;
+        display: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .slider img.active {
+        display: block;
+    }
+
+    h1 {
+        font-size: 1.4em;
+        margin-bottom: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        margin-bottom: 0.6rem;
     }
 
     .welcome {
-        text-align: center;
-        padding: 2rem 1rem;
+        padding: 1rem;
+        margin-top: -15px;
     }
 
     .lema {
-        font-size: 1.2em;
-        margin: 1rem 0;
+        font-size: 1em;
+        margin: 0.6rem 0;
+        line-height: 1.4;
     }
 
     .services-grid {
-        gap: 1rem;
+        gap: 0.8rem;
     }
 
     .service-card {
-        padding: 1.2rem;
-        text-align: center;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .service-card h2, 
-    .service-card h3 {
-        margin-bottom: 0.8rem;
+        padding: 0.8rem;
     }
 
     .footer-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1rem;
         text-align: center;
+        padding: 1rem 0.5rem;
     }
 
     .contact-info,
     .social-links {
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
-    .social-icons {
-        justify-content: center;
-        gap: 1.5rem;
+    /* Ajustes para páginas internas */
+    .about-content,
+    .services-content {
+        margin-top: 150px;
+        padding: 1.5rem 1rem;
+        background-color: var(--white);
     }
 
-    .about-content {
-        padding: 1rem;
+    .about-content h1,
+    .services-content h1 {
+        margin-top: 0;
+        text-align: center;
+        font-size: 1.6em;
+        color: var(--dark-blue);
+    }
+
+    .about-content h2,
+    .services-content h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: var(--dark-blue);
+    }
+
+    .about-content p,
+    .services-content p {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+        text-align: justify;
+        padding: 0 0.5rem;
     }
 
     .about-content ul {
-        padding-left: 1rem;
+        padding-left: 1.2rem;
+        margin-bottom: 1.5rem;
     }
 
-    .about-content li {
-        margin-bottom: 0.8rem;
-    }
-
-    .btn-primary {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 1rem;
-        margin: 1rem 0;
+    .about-content ul li {
+        margin-bottom: 0.5rem;
     }
 }
 
